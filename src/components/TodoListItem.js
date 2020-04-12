@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import {
   MdCheckBoxOutlineBlank,
   MdCheckBox,
@@ -45,4 +45,7 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
   );
 };
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
+//             React.memo 이용해 컴포넌트 성능 최적화
+//               - props 가 바꼈을 때만 update _re-render 함
+//               - 하지만, performance 체크해보면 크게 차이는 없음 (0.2 ~ 0.8 s 정도 단축됨)

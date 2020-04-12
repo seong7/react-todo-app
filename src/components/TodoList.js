@@ -3,7 +3,7 @@ import TodoListItem from './TodoListItem';
 import './TodoList.scss';
 
 const TodoList = ({ todos, onRemove, onToggle }) => {
-  // console.log(todos);  __  onToggle 후 re-render 될 때 todos 의 상태 확인하기
+  // console.log(todos); //__  onToggle 후 re-render 될 때 todos 의 상태 확인하기
   return (
     <div className="TodoList">
       {todos.map((todo) => (
