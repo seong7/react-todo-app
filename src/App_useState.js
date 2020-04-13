@@ -1,3 +1,5 @@
+/* 컴포넌트 성능 최적화 - useState 의 set 함수에 함수형 매개변수 사용하기 */
+
 import React, { useState, useRef, useCallback } from 'react';
 import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
