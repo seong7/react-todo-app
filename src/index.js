@@ -2,16 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import App_useReducer from './App_useReducer';
-import App_useState from './App_useState';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* 성능 최적화 테스트 */}
-    {/* <App /> */}
-    {/* <App_useState /> */}
-    <App_useReducer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
