@@ -6,8 +6,15 @@ import {
 } from 'react-icons/md';
 import './TodoListItem.scss';
 import cn from 'classnames'; // 조건부 스타일링 위해서 사용
+import { Todo } from 'src/App';
 
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
+export interface ITodoListItem {
+  todo: Todo;
+  onRemove: (param: number) => void;
+  onToggle: (param: number) => void;
+}
+
+const TodoListItem = ({ todo, onRemove, onToggle }: ITodoListItem) => {
   const { id, text, checked } = todo;
 
   return (

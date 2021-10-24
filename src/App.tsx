@@ -3,8 +3,14 @@ import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
+export interface Todo {
+  id: number;
+  text: string;
+  checked: boolean;
+}
+
 function App() {
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState<Todo[]>([
     {
       id: 1,
       text: '리액트의 기초를 알아보자',
@@ -24,7 +30,7 @@ function App() {
   const nextId = useRef(4); // 초기화
 
   /* todo 추가해주는 함수 */
-  const onInsert = useCallback((text) => {
+  const onInsert = useCallback((text: string) => {
     const todo = {
       id: nextId.current, // .current 로 호출해야 현재 id 값 가져옴
       text,
